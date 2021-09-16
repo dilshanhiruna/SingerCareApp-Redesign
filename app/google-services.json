@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "960268250066",
+    "project_id": "singercare-366ff",
+    "storage_bucket": "singercare-366ff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:960268250066:android:54f2996d393256b649760b",
+        "android_client_info": {
+          "package_name": "com.uee.singercare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "960268250066-2blmchungr1buc7d82a4cmetn3k15ok6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXpTx1IoLmLKJP-QU-UwyBR4vQiEe9Ang"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "960268250066-2blmchungr1buc7d82a4cmetn3k15ok6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
