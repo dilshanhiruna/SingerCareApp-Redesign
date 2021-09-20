@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SingerCareApp</string>
+    <string name="ongoing">Ongoing</string>
+    <string name="history">History</string>
 </resources>
