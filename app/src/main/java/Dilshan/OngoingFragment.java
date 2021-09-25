@@ -55,7 +55,7 @@ public class OngoingFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
-        db.collection("Cards").get().addOnCompleteListener(task -> {
+        db.collection("Cards").whereEqualTo("active", true).get().addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
 //                        Toast.makeText(this.getContext(), "Hello", Toast.LENGTH_SHORT).show();
 

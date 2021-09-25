@@ -2,13 +2,16 @@ package Dilshan;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -24,18 +27,22 @@ import java.util.concurrent.TimeUnit;
 public class HistoryAdapter2 extends RecyclerView.Adapter<HistoryAdapter2.ViewHolder> {
 
     Context context;
+    List<String> id;
     List<String> dp;
     List<String> title;
     List<String> category;
+    List<Boolean> rated;
     List<Timestamp> date;
 
 
-    public HistoryAdapter2(Context ct, List<String> dp,  List<String> title,  List<String> category,  List<Timestamp> date){
+    public HistoryAdapter2(Context ct, List<String> id, List<String> dp,  List<String> title,  List<String> category,  List<Timestamp> date,  List<Boolean> rated){
         this.context = ct;
+        this.id = id;
         this.dp = dp;
         this.title = title;
         this.category = category;
         this.date = date;
+        this.rated =rated;
 
     }
 
@@ -72,6 +79,27 @@ public class HistoryAdapter2 extends RecyclerView.Adapter<HistoryAdapter2.ViewHo
         holder.dp.setImageBitmap(decodedByte);
         holder.datediff.setText(String.valueOf(dateDifferent(createdDate,currentDate))+"d");
 
+        if (rated.get(position)){
+            holder.ratingBar.setVisibility(View.VISIBLE);
+        }else {
+            holder.rate_btn.setVisibility(View.VISIBLE);
+        }
+
+
+        holder.rate_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(v.getContext(), RateService.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.putExtra("ID",id.get(position));
+                v.getContext().startActivity(intent);
+
+            }
+
+        });
+
+
     }
 
     public Long dateDifferent(Date pdate, Date cdate){
@@ -89,6 +117,8 @@ public class HistoryAdapter2 extends RecyclerView.Adapter<HistoryAdapter2.ViewHo
 
         TextView title, category, date,datediff;
         ImageView dp;
+        RatingBar ratingBar;
+        Button rate_btn;
 
         public ViewHolder(@NonNull View items){
             super(items);
@@ -97,6 +127,8 @@ public class HistoryAdapter2 extends RecyclerView.Adapter<HistoryAdapter2.ViewHo
             date= items.findViewById(R.id.history_history_date);
             dp = items.findViewById(R.id.history_history_dp);
             datediff = items.findViewById(R.id.history_history_datediff);
+            ratingBar = items.findViewById(R.id.ratingBarDisplay);
+            rate_btn = items.findViewById(R.id.rate_my_service);
 
         }
 

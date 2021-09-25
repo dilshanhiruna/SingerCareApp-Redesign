@@ -24,7 +24,7 @@
             android:id="@+id/history_history_dp"
             android:layout_width="71dp"
             android:layout_height="88dp"
-
+            android:layout_marginTop="2dp"
             card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintStart_toStartOf="parent"
             card_view:layout_constraintTop_toTopOf="parent"
@@ -35,7 +35,7 @@
             android:layout_width="243dp"
             android:layout_height="19dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="30dp"
             android:textStyle="bold"
             android:text="TextView"
             card_view:layout_constraintStart_toEndOf="@+id/history_history_dp"
@@ -84,6 +84,34 @@
             card_view:layout_constraintHorizontal_bias="1.0"
             card_view:layout_constraintStart_toStartOf="@+id/textView"
             card_view:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <Button
+            android:id="@+id/rate_my_service"
+            android:layout_width="105dp"
+            android:layout_height="21dp"
+            android:background="@drawable/rate_my_service_btn"
+            android:layout_marginBottom="9dp"
+            android:textSize="10dp"
+            android:visibility="invisible"
+            android:textColor="#FF5864"
+            android:text="Rate my service"
+            android:textAllCaps="false"
+            card_view:layout_constraintBottom_toTopOf="@+id/history_history_title"
+            card_view:layout_constraintStart_toStartOf="@+id/history_history_title" />
+        <RatingBar
+            android:id="@+id/ratingBarDisplay"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_marginStart="16dp"
+            android:numStars="5"
+            android:isIndicator="true"
+            android:progressTint="@color/soft_pink"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintStart_toEndOf="@+id/history_history_dp"
+            card_view:layout_constraintTop_toTopOf="@+id/history_history_dp"
+            card_view:layout_constraintVertical_bias="0.125" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
