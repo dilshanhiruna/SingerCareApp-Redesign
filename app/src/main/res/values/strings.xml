@@ -2,6 +2,15 @@
     <string name="app_name">SingerCareApp</string>
     <string name="ongoing">Ongoing</string>
     <string name="history">History</string>
+    <string name="problem_still_occuring">Problem still occuring</string>
+    <string name="exchanged_confirmed_but_not_received">Exchanged confirmed but not received</string>
+    <string name="time_taken_beyond_3_days">Time taken beyond 3 days</string>
+    <string name="service_not_professional">Service not professional</string>
+    <string name="inappropriate_language_behaviour">Inappropriate language / Behaviour</string>
+    <string name="lack_of_competency">Lack of competency</string>
+    <string name="promoters">Promoters</string>
+    <string name="rate_service">Rate Service</string>
+    <string name="cancel">Cancel</string>
 
     <string-array name="categories">
         <item>Furniture</item>

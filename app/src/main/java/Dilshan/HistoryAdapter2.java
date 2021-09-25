@@ -32,10 +32,11 @@ public class HistoryAdapter2 extends RecyclerView.Adapter<HistoryAdapter2.ViewHo
     List<String> title;
     List<String> category;
     List<Boolean> rated;
+    List<Double> ratings;
     List<Timestamp> date;
 
 
-    public HistoryAdapter2(Context ct, List<String> id, List<String> dp,  List<String> title,  List<String> category,  List<Timestamp> date,  List<Boolean> rated){
+    public HistoryAdapter2(Context ct, List<String> id, List<String> dp,  List<String> title,  List<String> category,  List<Timestamp> date,  List<Boolean> rated,List<Double> ratings){
         this.context = ct;
         this.id = id;
         this.dp = dp;
@@ -43,6 +44,7 @@ public class HistoryAdapter2 extends RecyclerView.Adapter<HistoryAdapter2.ViewHo
         this.category = category;
         this.date = date;
         this.rated =rated;
+        this.ratings =ratings;
 
     }
 
@@ -81,6 +83,7 @@ public class HistoryAdapter2 extends RecyclerView.Adapter<HistoryAdapter2.ViewHo
 
         if (rated.get(position)){
             holder.ratingBar.setVisibility(View.VISIBLE);
+            holder.ratingBar.setRating(ratings.get(position).floatValue());
         }else {
             holder.rate_btn.setVisibility(View.VISIBLE);
         }
@@ -94,9 +97,7 @@ public class HistoryAdapter2 extends RecyclerView.Adapter<HistoryAdapter2.ViewHo
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 intent.putExtra("ID",id.get(position));
                 v.getContext().startActivity(intent);
-
             }
-
         });
 
 
