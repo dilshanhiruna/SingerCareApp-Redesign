@@ -33,6 +33,7 @@
 
         <TextView
             android:id="@+id/ongoing_history_title"
+            android:fontFamily="@font/roboto_medium"
             android:layout_width="233dp"
             android:layout_height="46dp"
             android:layout_marginStart="16dp"
@@ -45,6 +46,7 @@
 
         <TextView
             android:id="@+id/ongoing_history_category"
+            android:fontFamily="@font/roboto_regular"
             android:layout_width="245dp"
             android:layout_height="17dp"
             android:layout_marginTop="2dp"
