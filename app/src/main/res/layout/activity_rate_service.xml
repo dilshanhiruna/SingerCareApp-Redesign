@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/grey"
     tools:context="Dilshan.RateService">
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -57,22 +60,22 @@
         android:id="@+id/ratingBar_ratingInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="4dp"
         android:isIndicator="false"
-
         android:numStars="5"
-        android:progressTint="@color/soft_pink"
+        android:progressTint="@color/material_pink"
+        card_view:layout_constraintBottom_toTopOf="@+id/guideline7"
         card_view:layout_constraintEnd_toEndOf="parent"
-        card_view:layout_constraintHorizontal_bias="0.498"
         card_view:layout_constraintStart_toStartOf="parent"
-        card_view:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+        card_view:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        card_view:layout_constraintVertical_bias="0.0" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        card_view:layout_constraintGuide_begin="365dp" />
+        card_view:layout_constraintGuide_begin="371dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline8"

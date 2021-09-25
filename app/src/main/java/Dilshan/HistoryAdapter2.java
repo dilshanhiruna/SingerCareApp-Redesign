@@ -75,9 +75,8 @@ public class HistoryAdapter2 extends RecyclerView.Adapter<HistoryAdapter2.ViewHo
         }
 
         holder.title.setText(title.get(position));
-        holder.category.setText(category.get(position));
         String d = date.get(position).toDate().toLocaleString();
-        holder.date.setText(d.substring(13,17)+" "+ d.substring(21,23)  +"    "+d.substring(0,12));
+        holder.category.setText(category.get(position)+"  -  "+ d.substring(13,17)+" "+ d.substring(21,23)  +" "+d.substring(0,12));
         holder.dp.setImageBitmap(decodedByte);
         holder.datediff.setText(String.valueOf(dateDifferent(createdDate,currentDate))+"d");
 
@@ -125,7 +124,6 @@ public class HistoryAdapter2 extends RecyclerView.Adapter<HistoryAdapter2.ViewHo
             super(items);
             title = items.findViewById(R.id.history_history_title);
             category = items.findViewById(R.id.history_history_category);
-            date= items.findViewById(R.id.history_history_date);
             dp = items.findViewById(R.id.history_history_dp);
             datediff = items.findViewById(R.id.history_history_datediff);
             ratingBar = items.findViewById(R.id.ratingBarDisplay);
