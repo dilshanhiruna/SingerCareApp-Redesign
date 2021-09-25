@@ -11,6 +11,7 @@
     <string name="promoters">Promoters</string>
     <string name="rate_service">Rate Service</string>
     <string name="cancel">Cancel</string>
+    <string name="thanks_for_your_feedback">Thanks for your feedback</string>
 
     <string-array name="categories">
         <item>Furniture</item>

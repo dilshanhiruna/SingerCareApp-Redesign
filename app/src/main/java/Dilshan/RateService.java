@@ -3,6 +3,7 @@ package Dilshan;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -10,6 +11,7 @@ import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RatingBar;
@@ -27,6 +29,8 @@ import com.uee.singercare.R;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class RateService extends AppCompatActivity {
     String ID;
@@ -62,26 +66,37 @@ public class RateService extends AppCompatActivity {
             public void onClick(View view) {
                 float getrating = ratingBar.getRating();
 
-                Map<String, Object> rate_data = new HashMap<>();
-                rate_data.put("rating", getrating);
-                rate_data.put("rated", true);
+                if(getrating > 0){
 
-                DocumentReference docRef = db.collection("Cards").document(ID);
-                docRef.update(rate_data).addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void unused) {
-                        Log.d("SUC", "DocumentSnapshot successfully written!");
-                        finish();
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Log.w("ERR", "Error writing document", e);
-                    }
-                });
+                    Map<String, Object> rate_data = new HashMap<>();
+                    rate_data.put("rating", getrating);
+                    rate_data.put("rated", true);
 
+                    DocumentReference docRef = db.collection("Cards").document(ID);
+                    docRef.update(rate_data).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void unused) {
+                            Log.d("SUC", "DocumentSnapshot successfully written!");
+
+                            Dialog dialog = new Dialog(RateService.this, android.R.style.Theme_Light);
+                            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                            dialog.setContentView(R.layout.custom_modal);
+                            dialog.show();
+                            long delay = 2000L;
+                            new Timer().schedule(new RemindTask(), delay);
+
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Log.w("ERR", "Error writing document", e);
+                        }
+                    });
+
+                }
             }
         });
+
 
         DocumentReference docRef = db.collection("Cards").document(ID);
         docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
@@ -113,4 +128,12 @@ public class RateService extends AppCompatActivity {
 
 
     }
+
+    class RemindTask extends TimerTask {
+        public void run() {
+            Intent intent = new Intent(RateService.this, MyHistory.class);
+            RateService.this.startActivity(intent);
+
+        }}
+
 }
