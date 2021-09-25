@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.graphics.Color;
 import android.graphics.LinearGradient;
@@ -17,6 +18,7 @@ import com.uee.singercare.R;
 public class MyHistory extends AppCompatActivity {
 
     Button ongoingBtn, historyBtn;
+    RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,7 @@ public class MyHistory extends AppCompatActivity {
         setContentView(R.layout.activity_my_history);
         ongoingBtn = findViewById(R.id.ongoing_history_btn);
         historyBtn = findViewById(R.id.history_history_btn);
+        recyclerView = findViewById(R.id.ongoing_history_recyclerView);
 
         //Show ongoing fragment style on startup
         FragmentManager fragmentManager = getSupportFragmentManager();
