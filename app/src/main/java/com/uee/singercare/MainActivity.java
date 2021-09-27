@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
                         break;
                     case R.id.ic_myHistory:
-                        Intent intent = new Intent(MainActivity.this, MyHistory.class);
+                        Intent intent = new Intent(MainActivity.this, MyHistory.class).addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                         startActivity(intent);
                         break;
                     case R.id.ic_Contact:

@@ -84,7 +84,7 @@ public class MyHistory extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.ic_mainActivity:
-                        Intent intent = new Intent(MyHistory.this, MainActivity.class);
+                        Intent intent = new Intent(MyHistory.this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                         startActivity(intent);
                         break;
                     case R.id.ic_myHistory:
