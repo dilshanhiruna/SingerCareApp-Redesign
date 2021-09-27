@@ -6,15 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-<!--    <fragment-->
-<!--        android:id="@+id/container_fragment"-->
-<!--        android:name="androidx.navigation.fragment.NavHostFragment"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:layout_above="@+id/bottom_navigation_view"-->
-<!--        android:layout_marginBottom="0dp"-->
-<!--        app:defaultNavHost="true"-->
-<!--        app:navGraph="@navigation/navigation" />-->
+<!--    this is the navigationBar, copy this bottom whole
+thing and past it in any-->
+<!--    xml file that the navigationBar is needed-->
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation_view"

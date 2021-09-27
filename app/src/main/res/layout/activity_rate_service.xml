@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/grey"
     tools:context="Dilshan.RateService">
 
@@ -35,7 +36,7 @@
             android:layout_marginStart="93dp"
             android:layout_marginTop="12dp"
             android:fontFamily="@font/roboto_bold"
-            android:text="Title"
+
             android:textAlignment="center"
             android:textSize="18dp"
             card_view:layout_constraintEnd_toEndOf="@+id/rate_dp"
@@ -208,6 +209,24 @@
         card_view:layout_constraintHorizontal_bias="0.5"
         card_view:layout_constraintStart_toStartOf="parent"
         card_view:layout_constraintTop_toTopOf="@+id/guideline9" />
+
+    <!--    this is the navigationBar, copy this bottom whole
+thing and past it in any-->
+    <!--    xml file that the navigationBar is needed-->
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        app:itemIconTint="@color/drawer_item"
+        app:itemTextColor="@color/drawer_item"
+        app:itemBackground="@android:color/transparent"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

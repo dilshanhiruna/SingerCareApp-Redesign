@@ -14,7 +14,7 @@
         android:icon="@drawable/ic_baseline_phone_24"
         android:id="@+id/ic_Contact"/>
 
-    <item android:title="Warrenty"
+    <item android:title="Waranty"
         android:icon="@drawable/ic_baseline_receipt_24"
         android:id="@+id/ic_Warrenty"/>
 

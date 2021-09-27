@@ -33,7 +33,7 @@
 
         <TextView
             android:id="@+id/ongoing_history_title"
-            android:fontFamily="@font/roboto_medium"
+            android:fontFamily="@font/roboto_regular"
             android:layout_width="233dp"
             android:layout_height="46dp"
             android:layout_marginStart="16dp"

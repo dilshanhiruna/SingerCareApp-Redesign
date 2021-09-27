@@ -46,15 +46,19 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="109dp" />
 
+    <!--    this is the navigationBar, copy this bottom whole
+thing and past it in any-->
+    <!--    xml file that the navigationBar is needed-->
+
     <FrameLayout
         android:id="@+id/frameLayout"
-        android:layout_width="match_parent"
-        android:layout_height="560dp"
-        android:layout_marginTop="5dp"
+        android:layout_width="400dp"
+        android:layout_height="555dp"
+        android:layout_marginTop="15dp"
         android:layout_marginBottom="66dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/history_history_btn"
         app:layout_constraintVertical_bias="0.0" />

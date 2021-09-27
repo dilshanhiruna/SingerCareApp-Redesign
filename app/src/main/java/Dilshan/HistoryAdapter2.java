@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.transition.TransitionInflater;
 import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -93,9 +94,10 @@ public class HistoryAdapter2 extends RecyclerView.Adapter<HistoryAdapter2.ViewHo
             public void onClick(View v) {
 
                 Intent intent = new Intent(v.getContext(), RateService.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 intent.putExtra("ID",id.get(position));
                 v.getContext().startActivity(intent);
+
             }
         });
 

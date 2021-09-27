@@ -31,10 +31,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-
+      /* COPY THE WHOLE NAVIGATION BAR CODE BLOCK TO A ACTIVITY WHERE THE NAV IS NEEDED,
+        BUT NEED TO DO CHANGES IN "MenuItem menuItem = menu.getItem();" AND SWITCH STATEMENTS, LOVE YOU!
+       */
+        // NAVIGATION BAR START
         BottomNavigationView navView = findViewById(R.id.bottom_navigation_view);
         Menu menu = navView.getMenu();
-        MenuItem menuItem = menu.getItem(0);
+        MenuItem menuItem = menu.getItem(0); // IN HERE I = ITEM NUMBER (HOME=1,HISTORY=2,CONTACT=3,WARRANTY=4)
         menuItem.setChecked(true);
         navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -57,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+        //NAVIGATION BAR END
 
 
     }
