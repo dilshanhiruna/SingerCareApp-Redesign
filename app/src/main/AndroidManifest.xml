@@ -11,7 +11,6 @@
         android:theme="@style/Theme.SingerCareApp">
         <activity android:name="Dilshan.RateService"></activity>
         <activity android:name="Dilshan.MyHistory">
-
         </activity>
         <activity android:name=".MainActivity">
             <intent-filter>

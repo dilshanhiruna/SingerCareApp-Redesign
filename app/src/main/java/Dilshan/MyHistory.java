@@ -1,19 +1,27 @@
 package Dilshan;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.LinearGradient;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.uee.singercare.MainActivity;
 import com.uee.singercare.R;
+
+import org.jetbrains.annotations.NotNull;
 
 public class MyHistory extends AppCompatActivity {
 
@@ -63,6 +71,34 @@ public class MyHistory extends AppCompatActivity {
                 ongoingBtn.setTextColor(Color.parseColor("#2e2e2e"));
                 ongoingBtn.setBackgroundResource(R.drawable.ongoing_btn);
                 replaceFragment(new HistoryFragment());
+            }
+        });
+
+        BottomNavigationView navView = findViewById(R.id.bottom_navigation_view);
+        Menu menu = navView.getMenu();
+        MenuItem menuItem = menu.getItem(1);
+        menuItem.setChecked(true);
+
+        navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.ic_mainActivity:
+                        Intent intent = new Intent(MyHistory.this, MainActivity.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.ic_myHistory:
+
+                        break;
+                    case R.id.ic_Contact:
+
+                        break;
+                    case R.id.ic_Warrenty:
+
+                        break;
+
+                }
+                return true;
             }
         });
 
