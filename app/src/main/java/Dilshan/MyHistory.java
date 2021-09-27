@@ -1,19 +1,27 @@
 package Dilshan;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.LinearGradient;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.uee.singercare.MainActivity;
 import com.uee.singercare.R;
+
+import org.jetbrains.annotations.NotNull;
 
 public class MyHistory extends AppCompatActivity {
 
@@ -66,6 +74,34 @@ public class MyHistory extends AppCompatActivity {
             }
         });
 
+        BottomNavigationView navView = findViewById(R.id.bottom_navigation_view);
+        Menu menu = navView.getMenu();
+        MenuItem menuItem = menu.getItem(1);
+        menuItem.setChecked(true);
+
+        navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.ic_mainActivity:
+                        Intent intent = new Intent(MyHistory.this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                        startActivity(intent);
+                        break;
+                    case R.id.ic_myHistory:
+
+                        break;
+                    case R.id.ic_Contact:
+
+                        break;
+                    case R.id.ic_Warrenty:
+
+                        break;
+
+                }
+                return true;
+            }
+        });
+
 
 
     }
@@ -74,7 +110,12 @@ public class MyHistory extends AppCompatActivity {
 
         FragmentManager fragmentManager = getSupportFragmentManager();
 
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction().setCustomAnimations(
+                R.anim.slide_in,  // enter
+                R.anim.fade_out,  // exit
+                R.anim.fade_in,   // popEnter
+                R.anim.slide_out  // popExit
+        );
         fragmentTransaction.replace(R.id.frameLayout,fragment);
         fragmentTransaction.commit();
 

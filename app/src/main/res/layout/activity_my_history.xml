@@ -46,16 +46,36 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="109dp" />
 
+    <!--    this is the navigationBar, copy this bottom whole
+thing and past it in any-->
+    <!--    xml file that the navigationBar is needed-->
+
     <FrameLayout
         android:id="@+id/frameLayout"
-        android:layout_width="match_parent"
-        android:layout_height="550dp"
-        android:layout_marginTop="5dp"
+        android:layout_width="386dp"
+        android:layout_height="558dp"
+        android:layout_marginTop="15dp"
         android:layout_marginBottom="66dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/history_history_btn" />
+        app:layout_constraintTop_toBottomOf="@+id/history_history_btn"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        app:itemIconTint="@color/drawer_item"
+        app:itemTextColor="@color/drawer_item"
+        app:itemBackground="@android:color/transparent"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

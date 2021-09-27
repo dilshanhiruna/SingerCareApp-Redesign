@@ -10,6 +10,8 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -22,9 +24,11 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.uee.singercare.MainActivity;
 import com.uee.singercare.R;
 
 import java.util.HashMap;
@@ -58,7 +62,8 @@ public class RateService extends AppCompatActivity {
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finish();
+                RateService.this.finish();
+                getWindow().setWindowAnimations(0);
             }
         });
         submit_rate.setOnClickListener(new View.OnClickListener() {
@@ -125,13 +130,42 @@ public class RateService extends AppCompatActivity {
             }
         });
 
+        // NAVIGATION BAR START
+        BottomNavigationView navView = findViewById(R.id.bottom_navigation_view);
+        Menu menu = navView.getMenu();
+        MenuItem menuItem = menu.getItem(0); // IN HERE I = ITEM NUMBER (HOME=1,HISTORY=2,CONTACT=3,WARRANTY=4)
+        menuItem.setChecked(true);
+        navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.ic_mainActivity:
+                        Intent intent = new Intent(RateService.this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                        startActivity(intent);
+                        break;
+                    case R.id.ic_myHistory:
+                        Intent intent1 = new Intent(RateService.this, MyHistory.class).addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                        startActivity(intent1);
+                        break;
+                    case R.id.ic_Contact:
+
+                        break;
+                    case R.id.ic_Warrenty:
+
+                        break;
+                }
+                return true;
+            }
+        });
+        //NAVIGATION BAR END
+
 
 
     }
 
     class RemindTask extends TimerTask {
         public void run() {
-            Intent intent = new Intent(RateService.this, MyHistory.class);
+            Intent intent = new Intent(RateService.this, MyHistory.class).addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
             RateService.this.startActivity(intent);
 
         }}
