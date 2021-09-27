@@ -8,7 +8,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#F2F2F2</color>
-    <color name="dark_grey">#454545</color>
+    <color name="grey2">#F2F2F2</color>
+    <color name="dark_grey">#737373</color>
+    <color name="dark_grey2">#a6a6a6</color>
     <color name="light_pink">#FFF0EC</color>
     <color name="soft_pink">#FF5864</color>
     <color name="material_pink">#FF404E</color>
