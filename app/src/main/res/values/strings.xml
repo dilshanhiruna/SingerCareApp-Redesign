@@ -21,5 +21,32 @@
         <item>Blender</item>
     </string-array>
 
+    <string name="Select_Lanuage">Select Language</string>
+    <string name="English">English</string>
+    <string name="Sinhala">Sinhala</string>
+    <string name="Tamil">Tamil</string>
+    <string name="Getstarted">Get started</string>
+    <string name="Login">Login</string>
+    <string name="logintext">Please sign in to continue</string>
+
+    <string name="email">Email</string>
+    <string name="pwd">Password</string>
+    <string name="forgot">Forgot?</string>
+    <string name="register">New to SingerCare?</string>
+
+    <string name="forgotpwdtext">Please send your email. We will send you a link to rest your password</string>
+    <string name="resetPWDemail">Please enter your email</string>
+    <string name="send">send</string>
+
+    <string name="Signup">Sign Up</string>
+    <string name="fullname">Full name</string>
+    <string name="address">Address</string>
+    <string name="phone">Phone</string>
+    <string name="confirmpwd">Confirm password</string>
+    <string name="signuptext">Please sign up to continue</string>
+    <string name="dob">Dath of Birth</string>
+    <string name="alreadyregtext">Already registered?</string>
+
+    <string name="forgotpwd">Forgot password</string>
 
 </resources>
