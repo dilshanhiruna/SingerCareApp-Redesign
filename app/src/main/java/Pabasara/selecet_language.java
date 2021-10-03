@@ -23,7 +23,6 @@ public class selecet_language extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selecet_language);
 
-
         english = findViewById(R.id.englishBtn);
         sinhala = findViewById(R.id.sinhalaBtn);
         tamil = findViewById(R.id.TamilBtn);
