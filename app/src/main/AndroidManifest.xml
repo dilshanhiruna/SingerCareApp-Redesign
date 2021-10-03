@@ -10,8 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SingerCareApp">
         <activity
-            android:name="Pabasara.MainActivity"/>
-        <activity
             android:name="Pabasara.forgot_password"/>
         <activity
             android:name="Pabasara.signup"/>

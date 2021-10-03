@@ -168,6 +168,11 @@
             android:padding="4dp"  />
 
     </LinearLayout>
+
+    <!--    this is the navigationBar, copy this bottom whole
+thing and past it in any-->
+<!--    xml file that the navigationBar is needed-->
+
     <LinearLayout
         android:id="@+id/linear4"
         android:layout_width="413dp"
@@ -183,7 +188,7 @@
             android:layout_height="126dp"
             android:layout_margin="10dp"
             android:layout_weight="1"
-            android:padding="4dp"/>
+            android:padding="4dp" />
 
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"
@@ -197,13 +202,9 @@
             android:layout_height="126dp"
             android:layout_margin="10dp"
             android:layout_weight="1"
-            android:padding="4dp"  />
+            android:padding="4dp" />
 
     </LinearLayout>
-
-<!--    this is the navigationBar, copy this bottom whole
-thing and past it in any-->
-<!--    xml file that the navigationBar is needed-->
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation_view"

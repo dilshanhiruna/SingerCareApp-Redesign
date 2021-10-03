@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
       /* COPY THE WHOLE NAVIGATION BAR CODE BLOCK TO A ACTIVITY WHERE THE NAV IS NEEDED,
         BUT NEED TO DO CHANGES IN "MenuItem menuItem = menu.getItem();" AND SWITCH STATEMENTS, LOVE YOU!
        */
