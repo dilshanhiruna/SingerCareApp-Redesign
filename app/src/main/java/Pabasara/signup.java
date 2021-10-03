@@ -40,6 +40,7 @@ public class signup extends AppCompatActivity implements View.OnClickListener {
         setContentView(R.layout.activity_signup);
         mAuth = FirebaseAuth.getInstance();
 
+        //initialize the variables
         fullName = findViewById(R.id.et_signup_fullname);
         email = findViewById(R.id.et_signup_email);
         phone = findViewById(R.id.et_signup_phone);
@@ -62,6 +63,7 @@ public class signup extends AppCompatActivity implements View.OnClickListener {
             }
         });
 
+        //calender
         Calendar calendar = Calendar.getInstance();
         final int year = calendar.get(Calendar.YEAR);
         final int month = calendar.get(Calendar.MONTH);
