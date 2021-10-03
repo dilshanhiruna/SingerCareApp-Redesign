@@ -94,21 +94,21 @@ public class login extends AppCompatActivity {
         }
 
         //progress Dialog
-        ProgressDialog pd = new ProgressDialog(this);
-        pd.setTitle("Please wait");
-        pd.setMessage("Logging in....");
-        pd.setCanceledOnTouchOutside(false);
-        pd.show();
+        ProgressDialog progressDialogd = new ProgressDialog(this);
+        progressDialogd.setTitle("Please wait");
+        progressDialogd.setMessage("Logging in....");
+        progressDialogd.setCanceledOnTouchOutside(false);
+        progressDialogd.show();
 
         mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     //redirect to dashboard
-                    pd.dismiss();
+                    progressDialogd.dismiss();
                     startActivity(new Intent(login.this, MainActivity.class));
                 }else{
-                    pd.dismiss();
+                    progressDialogd.dismiss();
                     Toast.makeText(login.this, "Failed to login! Please check your credential", Toast.LENGTH_SHORT).show();
                 }
             }

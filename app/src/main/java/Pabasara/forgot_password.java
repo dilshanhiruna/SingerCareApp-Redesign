@@ -55,6 +55,7 @@ public class forgot_password extends AppCompatActivity {
             resetpwd_email.requestFocus();
         }
 
+        //send email to reset the password
         auth.sendPasswordResetEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
