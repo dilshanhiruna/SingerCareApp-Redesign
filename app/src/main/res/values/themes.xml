@@ -3,7 +3,7 @@
 <!--    <style name="Theme.SingerCareApp" parent="Theme.AppCompat.Light.NoActionBar">-->
     <style name="Theme.SingerCareApp" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
+        <!--<item name="colorPrimary">@color/purple_500</item>-->
         <item name="colorPrimaryVariant">@color/black</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
