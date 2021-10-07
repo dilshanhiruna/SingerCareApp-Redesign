@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SingerCareApp</string>
+    <!--on going-->
+    <string name="ongoing">நடந்து கொண்டிருக்கிறது</string>
+    <!--history-->
+    <string name="history">வரலாறு</string>
+    <!--Problem still occurring-->
+    <string name="problem_still_occuring">பிரச்சனை இன்னும் நடக்கிறது</string>
+    <!--Exchanged confirmed but not received-->
+    <string name="exchanged_confirmed_but_not_received">பரிமாற்றம் உறுதி செய்யப்பட்டது ஆனால் பெறப்படவில்லை</string>
+    <!--time_taken_beyond_3_days-->
+    <string name="time_taken_beyond_3_days">3 நாட்களுக்கு மேல் எடுக்கப்பட்ட நேரம்</string>
+    <!--Service not professional-->
+    <string name="service_not_professional">சேவை தொழில்முறை அல்ல</string>
+    <!--Inappropriate language / Behaviour-->
+    <string name="inappropriate_language_behaviour">பொருத்தமற்ற மொழி / நடத்தை</string>
+    <!--Lack of competency-->
+    <string name="lack_of_competency">திறமை இல்லாமை</string>
+    <!--Promoters-->
+    <string name="promoters">விளம்பரதாரர்கள்</string>
+    <!--Rate Service-->
+    <string name="rate_service">சேவை சேவை</string>
+    <!--Cancel-->
+    <string name="cancel">ரத்து</string>
+    <!--Thanks for your feedback-->
+    <string name="thanks_for_your_feedback">உங்கள் கருத்துக்கு நன்றி</string>
+
+    <string-array name="categories">
+        <item>Furniture</item>
+        <item>Electronics</item>
+        <item>Refrigerators</item>
+        <item>Washing Machine</item>
+        <item>Blender</item>
+    </string-array>
+
+    <!--Select Language-->
+    <string name="Select_Lanuage">மொழியை தேர்ந்தெடுங்கள்</string>
+    <!--English-->
+    <string name="English">ஆங்கிலம்</string>
+    <!--Sinhala-->
+    <string name="Sinhala">சிங்களம்</string>
+    <!--Tamil-->
+    <string name="Tamil">தமிழ்</string>
+    <!--Get started-->
+    <string name="Getstarted">தொடங்கவும்</string>
+    <!--Login-->
+    <string name="Login">உள்நுழைய</string>
+    <!--Please sign in to continue-->
+    <string name="logintext">தொடர தயவுசெய்து உள்நுழைக</string>
+
+    <!--Email-->
+    <string name="email">மின்னஞ்சல்</string>
+    <!--Password-->
+    <string name="pwd">கடவுச்சொல்</string>
+    <!--Forgot-->
+    <!--<string name="forgot">மறந்துவிட்டேன்?</string>-->
+    <string name="forgot">Forgot?</string>
+    <!--New to SingerCare-->
+    <!--<string name="register">சிங்கர் கேருக்கு புதியது?</string>-->
+    <string name="register">New to SingerCare?</string>
+
+    <!--Please send your email. We will send you a link to rest your password-->
+    <string name="forgotpwdtext">தயவுசெய்து உங்கள் மின்னஞ்சலை அனுப்பவும். உங்கள் கடவுச்சொல்லை மீட்டமைக்க ஒரு இணைப்பை நாங்கள் உங்களுக்கு அனுப்புவோம்</string>
+    <!--Please enter your email-->
+    <string name="resetPWDemail">தயவுசெய்து உங்கள் மின்னஞ்சலை உள்ளிடவும்</string>
+    <!--send-->
+    <string name="send">அனுப்பு</string>
+
+    <!--Sign Up-->
+    <string name="Signup">பதிவு</string>
+    <!--Full name-->
+    <string name="fullname">முழு பெயர்</string>
+    <!--Address-->
+    <string name="address">முகவரி</string>
+    <!--Phone-->
+    <string name="phone">தொலைபேசி</string>
+    <!--Confirm password-->
+    <string name="confirmpwd">கடவுச்சொல்லை உறுதிப்படுத்தவும்</string>
+    <!--Please sign up to continue-->
+    <string name="signuptext">தொடர தயவு செய்து பதிவு செய்யவும்</string>
+    <!--Dath of Birth-->
+    <string name="dob">பிறந்த தேதி</string>
+    <!--Already registered-->
+<!--    <string name="alreadyregtext">ஏற்கனவே பதிவு செய்யப்பட்டது?</string>-->
+    <string name="alreadyregtext">Already registered?</string>
+    <string name="loginrtn">Login</string>
+    <!--Forgot password-->
+    <string name="forgotpwd">கடவுச்சொல்லை மறந்துவிட்டீர்களா</string>
+</resources>

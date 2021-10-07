@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SingerCareApp</string>
+    <string name="ongoing">අපේක්ෂිත</string>
+    <string name="history">තොරතුරු</string>
+    <string name="problem_still_occuring">ගැටලුව තවමත් සිදු වෙමින් පවතී</string>
+    <string name="exchanged_confirmed_but_not_received">හුවමාරු කර ගත් නමුත් ලැබුනේ නැත</string>
+    <string name="time_taken_beyond_3_days">දින 3 කට වඩා ගත වූ කාලය</string>
+    <string name="service_not_professional">සේවාව වෘත්තීයමය නොවේ</string>
+    <string name="inappropriate_language_behaviour">නුසුදුසු භාෂාව / හැසිරීම</string>
+    <string name="lack_of_competency">නිපුණතාව නොමැතිකම</string>
+    <string name="promoters">ප්‍රවර්‍ධනය කරන්නන්</string>
+    <string name="rate_service">අනුපාත සේවාව</string>
+    <string name="cancel">අවලංගු කරන්න</string>
+    <string name="thanks_for_your_feedback">ඔබේ ප්‍රතිපෝෂණයට ස්තූතියි</string>
+
+    <string-array name="categories">
+        <item>Furniture</item>
+        <item>Electronics</item>
+        <item>Refrigerators</item>
+        <item>Washing Machine</item>
+        <item>Blender</item>
+    </string-array>
+
+    <string name="Select_Lanuage">භාෂාව තෝරන්න</string>
+    <string name="English">ඉංග්රීසි</string>
+    <string name="Sinhala">සිංහල</string>
+    <string name="Tamil">දෙමළ</string>
+    <string name="Getstarted">ආරම්භ කරන්න</string>
+    <string name="Login">ඇතුල් වන්න</string>
+    <string name="logintext">ඉදිරියට යාමට කරුණාකර පුරන්න</string>
+
+    <string name="email">විද්‍යුත් තැපෑල</string>
+    <string name="pwd">මුර පදය</string>
+    <string name="forgot">Forgot?</string>
+    <string name="register">New to SingerCare?</string>
+
+    <string name="forgotpwdtext">කරුණාකර ඔබේ විද්‍යුත් තැපෑල යවන්න. ඔබගේ මුරපදය නැවත සැකසීමට අපි ඔබට සම්බන්ධකයක් එවන්නෙමු</string>
+    <string name="resetPWDemail">ඔබේ විද්‍යුත් තැපෑල ඇතුළත් කරන්න</string>
+    <!--    <string name="send">යවන්න</string>-->
+    <string name="send">send</string>
+
+    <string name="Signup">ලියාපදිංචි වන්න</string>
+    <string name="fullname">සම්පූර්ණ නම</string>
+    <string name="address">ලිපිනය</string>
+    <string name="phone">දුරකථන</string>
+    <string name="confirmpwd">මුරපදය තහවුරු කරන්න</string>
+    <string name="signuptext">ඉදිරියට යාමට කරුණාකර ලියාපදිංචි වන්න</string>
+    <string name="dob">උපන්දිනය</string>
+<!--    <string name="alreadyregtext">දැනටමත් ලියාපදිංචි වී ඇත?</string>-->
+    <string name="alreadyregtext">Already registered?</string>
+    <string name="loginrtn">Login</string>
+<!--    <string name="forgotpwd">මුරපදය අමතක වුණා ද</string>-->
+    <string name="forgotpwd">Forgot password</string>
+
+
+    <!--hashen-->
+
+    <!--thiyuni-->
+</resources>

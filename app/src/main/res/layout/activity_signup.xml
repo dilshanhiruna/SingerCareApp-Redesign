@@ -20,11 +20,12 @@
 
     <TextView
         android:id="@+id/tvsignupsub"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/signuptext"
-        android:textSize="18dp"
+        android:textSize="16dp"
         app:layout_constraintStart_toStartOf="@+id/tvsignup"
         app:layout_constraintTop_toBottomOf="@+id/tvsignup" />
 
@@ -203,7 +204,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="116dp"
-        android:text="@string/Login"
+        android:text="@string/loginrtn"
         android:textColor="@color/material_pink"
         android:textSize="17dp"
         android:textStyle="bold"

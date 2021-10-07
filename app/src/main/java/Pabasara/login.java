@@ -20,7 +20,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.uee.singercare.MainActivity;
 import com.uee.singercare.R;
 
-public class login extends AppCompatActivity {
+public class login extends AppCompat {
 
     TextView registerLink,forgot;
     EditText login_email,login_pwd;

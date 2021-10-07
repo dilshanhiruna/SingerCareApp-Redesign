@@ -15,18 +15,40 @@ import com.uee.singercare.R;
 
 import java.util.Locale;
 
-public class selecet_language extends AppCompatActivity {
+public class selecet_language extends AppCompat {
 
     Button getstarted,english,sinhala,tamil;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selecet_language);
-
         english = findViewById(R.id.englishBtn);
         sinhala = findViewById(R.id.sinhalaBtn);
         tamil = findViewById(R.id.TamilBtn);
 
+        language_manager lm = new language_manager(this);
+
+        english.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                lm.updateResource("en");
+                recreate();
+            }
+        });
+        sinhala.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                lm.updateResource("si");
+                recreate();
+            }
+        });
+        tamil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                lm.updateResource("ta");
+                recreate();
+            }
+        });
         getstarted= findViewById(R.id.getstartedBtn);
         getstarted.setOnClickListener(new View.OnClickListener() {
             @Override

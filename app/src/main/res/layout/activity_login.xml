@@ -10,13 +10,13 @@
         android:id="@+id/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="132dp"
         android:text="@string/Login"
         android:textColor="@color/black"
-        android:textSize="45dp"
+        android:textSize="43dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.226"
+        app:layout_constraintHorizontal_bias="0.237"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,10 +28,10 @@
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.395"
+        app:layout_constraintHorizontal_bias="0.423"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login"
-        app:layout_constraintVertical_bias="0.017" />
+        app:layout_constraintVertical_bias="0.025" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/bx_login_email"
@@ -116,8 +116,8 @@
         android:id="@+id/btnlogin"
         android:layout_width="272dp"
         android:layout_height="66dp"
-        android:layout_marginTop="436dp"
-        android:text="@string/Login"
+        android:layout_marginTop="468dp"
+        android:text="@string/loginrtn"
         android:textColor="@color/black"
         android:textSize="18dp"
         android:textStyle="bold"

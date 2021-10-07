@@ -2,7 +2,7 @@
     <string name="app_name">SingerCareApp</string>
     <string name="ongoing">Ongoing</string>
     <string name="history">History</string>
-    <string name="problem_still_occuring">Problem still occuring</string>
+    <string name="problem_still_occuring">Problem still occurring</string>
     <string name="exchanged_confirmed_but_not_received">Exchanged confirmed but not received</string>
     <string name="time_taken_beyond_3_days">Time taken beyond 3 days</string>
     <string name="service_not_professional">Service not professional</string>
@@ -34,7 +34,7 @@
     <string name="forgot">Forgot?</string>
     <string name="register">New to SingerCare?</string>
 
-    <string name="forgotpwdtext">Please send your email. We will send you a link to rest your password</string>
+    <string name="forgotpwdtext">Please send your email. We will send you a link to reset your password</string>
     <string name="resetPWDemail">Please enter your email</string>
     <string name="send">send</string>
 
@@ -44,9 +44,9 @@
     <string name="phone">Phone</string>
     <string name="confirmpwd">Confirm password</string>
     <string name="signuptext">Please sign up to continue</string>
-    <string name="dob">Dath of Birth</string>
+    <string name="dob">Date of Birth</string>
     <string name="alreadyregtext">Already registered?</string>
-
+    <string name="loginrtn">Login</string>
     <string name="forgotpwd">Forgot password</string>
 
 </resources>
