@@ -183,7 +183,7 @@
         android:orientation="horizontal"
         card_view:layout_constraintGuide_begin="623dp" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/SubmitRateBtn"
         android:layout_width="126dp"
         android:layout_height="35dp"
@@ -197,7 +197,7 @@
         card_view:layout_constraintStart_toEndOf="@+id/SubmitRateBackBtn"
         card_view:layout_constraintTop_toTopOf="@+id/guideline9" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/SubmitRateBackBtn"
         android:layout_width="126dp"
         android:layout_height="35dp"

@@ -7,7 +7,7 @@
     android:background="@color/grey"
     tools:context="Dilshan.MyHistory">
 
-    <Button
+    <android.widget.Button
         android:id="@+id/history_history_btn"
         android:layout_width="145dp"
         android:layout_height="45dp"
@@ -18,7 +18,7 @@
         app:layout_constraintBaseline_toBaselineOf="@+id/ongoing_history_btn"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/ongoing_history_btn"
         android:layout_width="145dp"
         android:layout_height="45dp"
