@@ -33,6 +33,7 @@ public class selecet_language extends AppCompat {
             public void onClick(View v) {
                 lm.updateResource("en");
 //                recreate();
+                Toast.makeText(selecet_language.this, "Changed the language to English", Toast.LENGTH_SHORT).show();
             }
         });
         sinhala.setOnClickListener(new View.OnClickListener() {
