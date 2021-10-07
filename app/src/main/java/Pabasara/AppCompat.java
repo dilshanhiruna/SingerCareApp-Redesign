@@ -12,4 +12,5 @@ public class AppCompat extends AppCompatActivity {
         language_manager languageManager = new language_manager(this);
         languageManager.updateResource(languageManager.getLang());
     }
+
 }
