@@ -23,7 +23,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/englishBtn"
         android:layout_width="208dp"
         android:layout_height="70dp"
@@ -38,7 +38,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_selectLanguage" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/sinhalaBtn"
         android:layout_width="208dp"
         android:layout_height="70dp"
@@ -53,7 +53,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/englishBtn" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/TamilBtn"
         android:layout_width="208dp"
         android:layout_height="70dp"
@@ -68,13 +68,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sinhalaBtn" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/getstartedBtn"
         android:layout_width="208dp"
         android:layout_height="70dp"
         android:layout_marginBottom="129dp"
         android:text="@string/Getstarted"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="17dp"
         android:background="@drawable/submitratebtn"
         android:textStyle="bold"

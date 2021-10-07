@@ -41,6 +41,7 @@ public class selecet_language extends AppCompat {
             public void onClick(View v) {
                 lm.updateResource("si");
 //                recreate();
+                Toast.makeText(selecet_language.this, "Changed the language to Sinhala", Toast.LENGTH_SHORT).show();
             }
         });
         tamil.setOnClickListener(new View.OnClickListener() {
@@ -48,6 +49,7 @@ public class selecet_language extends AppCompat {
             public void onClick(View v) {
                 lm.updateResource("ta");
 //                recreate();
+                Toast.makeText(selecet_language.this, "Changed the language to Tamil", Toast.LENGTH_SHORT).show();
             }
         });
         getstarted= findViewById(R.id.getstartedBtn);

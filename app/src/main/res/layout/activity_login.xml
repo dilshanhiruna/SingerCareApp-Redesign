@@ -112,13 +112,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/btnlogin"
         android:layout_width="272dp"
         android:layout_height="66dp"
         android:layout_marginTop="468dp"
         android:text="@string/loginrtn"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
+        android:background="@drawable/submitratebtn"
         android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

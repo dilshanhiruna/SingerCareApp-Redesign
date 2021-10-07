@@ -211,22 +211,23 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signupBtn"
-        app:layout_constraintVertical_bias="0.352" />
+        app:layout_constraintVertical_bias="0.475" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/signupBtn"
         android:layout_width="301dp"
         android:layout_height="57dp"
         android:layout_marginBottom="20dp"
+        android:background="@drawable/submitratebtn"
         android:text="@string/Signup"
+        android:textColor="@color/white"
         android:textSize="17dp"
         android:textStyle="bold"
-        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/tv_signup_alreadyreg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bx_dob"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.816" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
