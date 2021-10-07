@@ -80,7 +80,7 @@
             card_view:layout_constraintStart_toStartOf="@+id/textView"
             card_view:layout_constraintTop_toBottomOf="@+id/textView" />
 
-        <Button
+        <android.widget.Button
             android:id="@+id/rate_my_service"
             android:layout_width="105dp"
             android:layout_height="21dp"
