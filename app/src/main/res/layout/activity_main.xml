@@ -4,8 +4,87 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity">
 
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout_dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="181dp"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/dashbord"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_dp"
+            android:layout_width="101dp"
+            android:layout_height="114dp"
+            app:layout_constraintHorizontal_bias="1.0"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/dashtopic"
+            android:layout_width="279dp"
+            android:layout_height="108dp"
+            android:layout_marginTop="4dp"
+            android:gravity="left"
+            android:padding="20px"
+            android:text="@string/topic_dashboard"
+            android:textColor="@color/black"
+            android:textSize="33dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/profile_dp"
+            app:layout_constraintHorizontal_bias="0.516"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.widget.Button
+            android:id="@+id/sendinq_dashboard"
+            android:layout_width="148dp"
+            android:layout_height="50dp"
+            android:background="@drawable/inquirybtn"
+            android:text="@string/inquiry"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.095"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dashtopic"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<!--    <androidx.constraintlayout.widget.Guideline-->
+<!--        android:id="@+id/guidelineDB1"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        card_view:layout_constraintGuide_begin="52dp" />-->
+
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="497dp"
+        android:layout_above="@+id/bottom_navigation_view"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="180dp"
+        android:layout_marginBottom="-2dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout_dashboard"
+
+
+        />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation_view"
@@ -20,5 +99,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/menu" />
+
 
 </RelativeLayout>

@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/SingerCareApp-Redesign/app/src/main/res/drawable/cancelbtn.xml" value="0.2703125" />
         <entry key="..\:/SingerCareApp-Redesign/app/src/main/res/drawable/history_btn.xml" value="0.2703125" />
+        <entry key="..\:/SingerCareApp-Redesign/app/src/main/res/drawable/inquirybtn.xml" value="0.2703125" />
         <entry key="..\:/SingerCareApp-Redesign/app/src/main/res/drawable/ongoing_btn.xml" value="0.2703125" />
         <entry key="..\:/SingerCareApp-Redesign/app/src/main/res/drawable/rate_my_service_btn.xml" value="0.2703125" />
         <entry key="..\:/SingerCareApp-Redesign/app/src/main/res/drawable/submitratebtn.xml" value="0.2703125" />
