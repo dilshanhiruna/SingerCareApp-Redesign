@@ -22,11 +22,17 @@
         <item>Blender</item>
     </string-array>
 
-    <string name="Select_Lanuage">භාෂාව තෝරන්න</string>
-    <string name="English">ඉංග්රීසි</string>
-    <string name="Sinhala">සිංහල</string>
-    <string name="Tamil">දෙමළ</string>
-    <string name="Getstarted">ආරම්භ කරන්න</string>
+<!--    <string name="Select_Lanuage">භාෂාව තෝරන්න</string>-->
+<!--    <string name="English">English</string>-->
+<!--    <string name="Sinhala">Sinhala</string>-->
+<!--    <string name="Tamil">Tamil</string>-->
+<!--    <string name="Getstarted">ආරම්භ කරන්න</string>-->
+
+    <string name="Select_Lanuage">Select Language</string>
+    <string name="English">English</string>
+    <string name="Sinhala">Sinhala</string>
+    <string name="Tamil">Tamil</string>
+    <string name="Getstarted">Get started</string>
     <string name="Login">ඇතුල් වන්න</string>
     <string name="logintext">ඉදිරියට යාමට කරුණාකර පුරන්න</string>
 

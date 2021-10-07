@@ -32,21 +32,21 @@ public class selecet_language extends AppCompat {
             @Override
             public void onClick(View v) {
                 lm.updateResource("en");
-                recreate();
+//                recreate();
             }
         });
         sinhala.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 lm.updateResource("si");
-                recreate();
+//                recreate();
             }
         });
         tamil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 lm.updateResource("ta");
-                recreate();
+//                recreate();
             }
         });
         getstarted= findViewById(R.id.getstartedBtn);
