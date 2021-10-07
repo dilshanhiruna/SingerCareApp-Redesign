@@ -2,7 +2,7 @@
     <string name="app_name">SingerCareApp</string>
     <string name="ongoing">Ongoing</string>
     <string name="history">History</string>
-    <string name="problem_still_occuring">Problem still occuring</string>
+    <string name="problem_still_occuring">Problem still occurring</string>
     <string name="exchanged_confirmed_but_not_received">Exchanged confirmed but not received</string>
     <string name="time_taken_beyond_3_days">Time taken beyond 3 days</string>
     <string name="service_not_professional">Service not professional</string>
@@ -21,5 +21,32 @@
         <item>Blender</item>
     </string-array>
 
+    <string name="Select_Lanuage">Select Language</string>
+    <string name="English">English</string>
+    <string name="Sinhala">Sinhala</string>
+    <string name="Tamil">Tamil</string>
+    <string name="Getstarted">Get started</string>
+    <string name="Login">Login</string>
+    <string name="logintext">Please sign in to continue</string>
+
+    <string name="email">Email</string>
+    <string name="pwd">Password</string>
+    <string name="forgot">Forgot?</string>
+    <string name="register">New to SingerCare?</string>
+
+    <string name="forgotpwdtext">Please send your email. We will send you a link to reset your password</string>
+    <string name="resetPWDemail">Please enter your email</string>
+    <string name="send">send</string>
+
+    <string name="Signup">Sign Up</string>
+    <string name="fullname">Full name</string>
+    <string name="address">Address</string>
+    <string name="phone">Phone</string>
+    <string name="confirmpwd">Confirm password</string>
+    <string name="signuptext">Please sign up to continue</string>
+    <string name="dob">Date of Birth</string>
+    <string name="alreadyregtext">Already registered?</string>
+    <string name="loginrtn">Login</string>
+    <string name="forgotpwd">Forgot password</string>
 
 </resources>
