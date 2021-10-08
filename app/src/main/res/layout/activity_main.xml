@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/grey"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity">
 
@@ -72,19 +73,399 @@
 
     <LinearLayout
         android:id="@+id/linear1"
-        android:layout_width="match_parent"
-        android:layout_height="497dp"
+        android:layout_width="413dp"
+        android:layout_height="155dp"
         android:layout_above="@+id/bottom_navigation_view"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="180dp"
-        android:layout_marginBottom="-2dp"
+        android:layout_marginBottom="340dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout_dashboard"
+        app:layout_constraintStart_toStartOf="parent">
 
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:padding="4dp">
 
-        />
+            <ImageView
+                android:id="@+id/img_refrigerator"
+                android:layout_width="37dp"
+                android:layout_height="59dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="18dp"
+                tools:background="@drawable/fridge" />
+
+            <TextView
+                android:id="@+id/text_refrigerator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="95dp"
+                android:padding="5dp"
+                android:text="Refrigerator"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/img_tv"
+                android:layout_width="79dp"
+                android:layout_height="47dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="17sp"
+                android:layout_marginRight="15dp"
+                tools:background="@drawable/tv" />
+
+            <TextView
+                android:id="@+id/text_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="95dp"
+                android:padding="5dp"
+                android:text="Television"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/img_ac"
+                android:layout_width="81dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="23sp"
+                android:layout_marginRight="15dp"
+                tools:background="@drawable/air" />
+
+            <TextView
+                android:id="@+id/text_ac"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="95dp"
+                android:padding="5dp"
+                android:text="Air Condition"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="match_parent"
+        android:layout_height="154dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="349dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/img_com"
+                android:layout_width="92dp"
+                android:layout_height="46dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="17sp"
+                tools:background="@drawable/lap" />
+
+            <TextView
+                android:id="@+id/text_com"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="95dp"
+                android:padding="5dp"
+                android:text="Computer"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/img_furniture"
+                android:layout_width="84dp"
+                android:layout_height="61dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10sp"
+                android:layout_marginRight="15dp"
+                tools:background="" />
+
+            <TextView
+                android:id="@+id/text_furniture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="95dp"
+                android:padding="5dp"
+                android:text="Furniture"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/img_oven"
+                android:layout_width="88dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="17sp"
+                android:layout_marginRight="15dp"
+                tools:background="" />
+
+            <TextView
+                android:id="@+id/text_oven"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="95dp"
+                android:padding="5dp"
+                android:text="Oven"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear3"
+        android:layout_width="match_parent"
+        android:layout_height="162dp"
+        android:layout_above="@+id/bottom_navigation_view"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="505dp"
+        android:layout_marginBottom="13dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/img_blender"
+                android:layout_width="50dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="15sp"
+                tools:background="@drawable/blender" />
+
+            <TextView
+                android:id="@+id/text_blender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="95dp"
+                android:padding="5dp"
+                android:text="Blender"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/img_irons"
+                android:layout_width="42dp"
+                android:layout_height="61dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10sp"
+                android:layout_marginRight="15dp"
+                tools:background="@drawable/iron" />
+
+            <TextView
+                android:id="@+id/text_irons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="95dp"
+                android:padding="5dp"
+                android:text="Irons"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/img_audio"
+                android:layout_width="41dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="23sp"
+                android:layout_marginRight="15dp"
+                tools:background="@drawable/audio" />
+
+            <TextView
+                android:id="@+id/text_audio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="95dp"
+                android:padding="5dp"
+                android:text="Audio"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear4"
+        android:layout_width="match_parent"
+        android:layout_height="162dp"
+        android:layout_above="@+id/bottom_navigation_view"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="655dp"
+        android:layout_marginBottom="13dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/img_toaster"
+                android:layout_width="50dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="15sp"
+                tools:background="@drawable/cooker" />
+
+            <TextView
+                android:id="@+id/text_toaster"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="95dp"
+                android:padding="5dp"
+                android:text="Toaster"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/img_fan"
+                android:layout_width="42dp"
+                android:layout_height="61dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10sp"
+                android:layout_marginRight="15dp"
+                tools:background="@drawable/fan" />
+
+            <TextView
+                android:id="@+id/text_fan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="95dp"
+                android:padding="5dp"
+                android:text="Fan"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/img_industry"
+                android:layout_width="41dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="23sp"
+                android:layout_marginRight="15dp"
+                tools:background="" />
+
+            <TextView
+                android:id="@+id/text_industry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="95dp"
+                android:padding="5dp"
+                android:text="Industrial"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation_view"
@@ -99,6 +480,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/menu" />
-
 
 </RelativeLayout>
