@@ -14,8 +14,10 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.database.FirebaseDatabase;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -25,19 +27,20 @@ import static androidx.navigation.Navigation.findNavController;
 
 public class MainActivity extends AppCompatActivity {
 
+    ImageView Img;
+
+    private FirebaseDatabase db = FirebaseDatabase.getInstance();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Img = findViewById(R.id.profile_dp);
 
 
 
 
-
-      /* COPY THE WHOLE NAVIGATION BAR CODE BLOCK TO A ACTIVITY WHERE THE NAV IS NEEDED,
-        BUT NEED TO DO CHANGES IN "MenuItem menuItem = menu.getItem();" AND SWITCH STATEMENTS, LOVE YOU!
-       */
         // NAVIGATION BAR START
         BottomNavigationView navView = findViewById(R.id.bottom_navigation_view);
         Menu menu = navView.getMenu();

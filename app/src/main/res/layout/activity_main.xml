@@ -23,6 +23,7 @@
             android:id="@+id/profile_dp"
             android:layout_width="101dp"
             android:layout_height="114dp"
+            android:background="@drawable/dp"
             app:layout_constraintHorizontal_bias="1.0"
             card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintEnd_toEndOf="parent"
@@ -88,13 +89,14 @@
             android:layout_weight="1"
             android:padding="4dp">
 
-            <ImageView
+            <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/img_refrigerator"
                 android:layout_width="37dp"
                 android:layout_height="59dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="18dp"
-                tools:background="@drawable/fridge" />
+                tools:background="@drawable/icon_fridge"
+                tools:ignore="MissingClass" />
 
             <TextView
                 android:id="@+id/text_refrigerator"
@@ -123,7 +125,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="17sp"
                 android:layout_marginRight="15dp"
-                tools:background="@drawable/tv" />
+                tools:background="@drawable/icon_tv" />
 
             <TextView
                 android:id="@+id/text_tv"
@@ -147,12 +149,12 @@
 
             <ImageView
                 android:id="@+id/img_ac"
-                android:layout_width="81dp"
-                android:layout_height="36dp"
+                android:layout_width="79dp"
+                android:layout_height="48dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="23sp"
                 android:layout_marginRight="15dp"
-                tools:background="@drawable/air" />
+                tools:background="@drawable/icon_ac" />
 
             <TextView
                 android:id="@+id/text_ac"
@@ -191,8 +193,8 @@
                 android:layout_width="92dp"
                 android:layout_height="46dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_margin="17sp"
-                tools:background="@drawable/lap" />
+                android:layout_margin="20sp"
+                tools:background="@drawable/icon_laptop" />
 
             <TextView
                 android:id="@+id/text_com"
@@ -219,9 +221,9 @@
                 android:layout_width="84dp"
                 android:layout_height="61dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_margin="10sp"
+                android:layout_margin="18sp"
                 android:layout_marginRight="15dp"
-                tools:background="" />
+                tools:background="@drawable/icon_sofa" />
 
             <TextView
                 android:id="@+id/text_furniture"
@@ -248,9 +250,9 @@
                 android:layout_width="88dp"
                 android:layout_height="44dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_margin="17sp"
+                android:layout_margin="23sp"
                 android:layout_marginRight="15dp"
-                tools:background="" />
+                tools:background="@drawable/icon_oven" />
 
             <TextView
                 android:id="@+id/text_oven"
@@ -292,7 +294,7 @@
                 android:layout_height="56dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="15sp"
-                tools:background="@drawable/blender" />
+                tools:background="@drawable/icon_blender" />
 
             <TextView
                 android:id="@+id/text_blender"
@@ -319,9 +321,8 @@
                 android:layout_width="42dp"
                 android:layout_height="61dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_margin="10sp"
-                android:layout_marginRight="15dp"
-                tools:background="@drawable/iron" />
+                android:layout_margin="15sp"
+                tools:background="@drawable/icon_oven" />
 
             <TextView
                 android:id="@+id/text_irons"
@@ -345,12 +346,12 @@
 
             <ImageView
                 android:id="@+id/img_audio"
-                android:layout_width="41dp"
-                android:layout_height="44dp"
+                android:layout_width="72dp"
+                android:layout_height="58dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_margin="23sp"
+                android:layout_margin="20sp"
                 android:layout_marginRight="15dp"
-                tools:background="@drawable/audio" />
+                tools:background="@drawable/icon_audio" />
 
             <TextView
                 android:id="@+id/text_audio"
@@ -367,105 +368,105 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/linear4"
-        android:layout_width="match_parent"
-        android:layout_height="162dp"
-        android:layout_above="@+id/bottom_navigation_view"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="655dp"
-        android:layout_marginBottom="13dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+<!--    <LinearLayout-->
+<!--        android:id="@+id/linear4"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="162dp"-->
+<!--        android:layout_above="@+id/bottom_navigation_view"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_marginTop="655dp"-->
+<!--        android:layout_marginBottom="13dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent">-->
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="0dp"
-            android:layout_height="130dp"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:padding="4dp">
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="130dp"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:padding="4dp">-->
 
-            <ImageView
-                android:id="@+id/img_toaster"
-                android:layout_width="50dp"
-                android:layout_height="56dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_margin="15sp"
-                tools:background="@drawable/cooker" />
+<!--            <ImageView-->
+<!--                android:id="@+id/img_toaster"-->
+<!--                android:layout_width="50dp"-->
+<!--                android:layout_height="56dp"-->
+<!--                android:layout_gravity="center_horizontal"-->
+<!--                android:layout_margin="15sp"-->
+<!--                tools:background="@drawable/cooker" />-->
 
-            <TextView
-                android:id="@+id/text_toaster"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="95dp"
-                android:padding="5dp"
-                android:text="Toaster"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
+<!--            <TextView-->
+<!--                android:id="@+id/text_toaster"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="95dp"-->
+<!--                android:padding="5dp"-->
+<!--                android:text="Toaster"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textStyle="bold" />-->
 
-        </androidx.cardview.widget.CardView>
+<!--        </androidx.cardview.widget.CardView>-->
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="0dp"
-            android:layout_height="130dp"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:padding="4dp">
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="130dp"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:padding="4dp">-->
 
-            <ImageView
-                android:id="@+id/img_fan"
-                android:layout_width="42dp"
-                android:layout_height="61dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_margin="10sp"
-                android:layout_marginRight="15dp"
-                tools:background="@drawable/fan" />
+<!--            <ImageView-->
+<!--                android:id="@+id/img_fan"-->
+<!--                android:layout_width="42dp"-->
+<!--                android:layout_height="61dp"-->
+<!--                android:layout_gravity="center_horizontal"-->
+<!--                android:layout_margin="10sp"-->
+<!--                android:layout_marginRight="15dp"-->
+<!--                tools:background="@drawable/fan" />-->
 
-            <TextView
-                android:id="@+id/text_fan"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="95dp"
-                android:padding="5dp"
-                android:text="Fan"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
+<!--            <TextView-->
+<!--                android:id="@+id/text_fan"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="95dp"-->
+<!--                android:padding="5dp"-->
+<!--                android:text="Fan"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textStyle="bold" />-->
 
-        </androidx.cardview.widget.CardView>
+<!--        </androidx.cardview.widget.CardView>-->
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="0dp"
-            android:layout_height="130dp"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:padding="4dp">
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="130dp"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:padding="4dp">-->
 
-            <ImageView
-                android:id="@+id/img_industry"
-                android:layout_width="41dp"
-                android:layout_height="44dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_margin="23sp"
-                android:layout_marginRight="15dp"
-                tools:background="" />
+<!--            <ImageView-->
+<!--                android:id="@+id/img_industry"-->
+<!--                android:layout_width="41dp"-->
+<!--                android:layout_height="44dp"-->
+<!--                android:layout_gravity="center_horizontal"-->
+<!--                android:layout_margin="23sp"-->
+<!--                android:layout_marginRight="15dp"-->
+<!--                tools:background="" />-->
 
-            <TextView
-                android:id="@+id/text_industry"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="95dp"
-                android:padding="5dp"
-                android:text="Industrial"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
+<!--            <TextView-->
+<!--                android:id="@+id/text_industry"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="95dp"-->
+<!--                android:padding="5dp"-->
+<!--                android:text="Industrial"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textStyle="bold" />-->
 
-        </androidx.cardview.widget.CardView>
+<!--        </androidx.cardview.widget.CardView>-->
 
-    </LinearLayout>
+<!--    </LinearLayout>-->
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation_view"
