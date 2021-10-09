@@ -73,7 +73,6 @@ public class selecet_language extends AppCompat {
             @Override
             public void onClick(View v) {
                 lm.updateResource("ta");
-//                recreate();
 //                Toast.makeText(selecet_language.this, "Changed the language to Tamil", Toast.LENGTH_SHORT).show();
 
                 gd.setCornerRadii(new float[]{20,20,0,0,0,0,15,15});
