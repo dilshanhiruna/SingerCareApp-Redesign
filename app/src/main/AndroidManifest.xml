@@ -18,16 +18,18 @@
         <activity
             android:name="Hashen.SendInquiry"
             android:exported="true">
+
+        </activity>
+        <activity android:name="Pabasara.forgot_password" />
+        <activity android:name="Pabasara.signup" />
+        <activity android:name="Pabasara.login" />
+        <activity android:name="Pabasara.selecet_language" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="Pabasara.forgot_password" />
-        <activity android:name="Pabasara.signup" />
-        <activity android:name="Pabasara.login" />
-        <activity android:name="Pabasara.selecet_language" />
         <activity android:name="Dilshan.RateService" />
         <activity android:name="Dilshan.MyHistory" />
         <activity android:name=".MainActivity" />
