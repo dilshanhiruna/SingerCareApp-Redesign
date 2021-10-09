@@ -26,22 +26,22 @@
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profile_dp"
-                android:layout_width="105dp"
-                android:layout_height="114dp"
-                android:background="@drawable/dp"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintVertical_bias="0.029"
+                android:layout_width="71dp"
+                android:layout_height="88dp"
+                android:src="@drawable/dp"
+                app:layout_constraintHorizontal_bias="0.917"
+                app:layout_constraintVertical_bias="0.168"
                 card_view:layout_constraintBottom_toBottomOf="parent"
                 card_view:layout_constraintEnd_toEndOf="parent"
                 card_view:layout_constraintStart_toStartOf="parent"
-                card_view:layout_constraintTop_toTopOf="parent"
-                />
+                card_view:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/dashtopic"
                 android:layout_width="279dp"
                 android:layout_height="108dp"
                 android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto_black"
                 android:gravity="left"
                 android:padding="20px"
                 android:text="@string/topic_dashboard"
@@ -49,22 +49,22 @@
                 android:textSize="33dp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toStartOf="@+id/profile_dp"
-                app:layout_constraintHorizontal_bias="0.866"
+                app:layout_constraintHorizontal_bias="0.787"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <android.widget.Button
                 android:id="@+id/sendinq_dashboard"
-                android:layout_width="135dp"
-                android:layout_height="35dp"
+                android:layout_width="106dp"
+                android:layout_height="24dp"
                 android:background="@drawable/inquirybtn"
                 android:text="@string/inquiry"
-                android:textSize="10dp"
                 android:textColor="@color/white"
+                android:textSize="9dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.095"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.05"
+                app:layout_constraintStart_toStartOf="@+id/dashtopic"
                 app:layout_constraintTop_toBottomOf="@+id/dashtopic"
                 app:layout_constraintVertical_bias="0.0" />
 
