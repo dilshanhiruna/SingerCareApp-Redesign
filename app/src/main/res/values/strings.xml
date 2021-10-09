@@ -51,4 +51,5 @@
 
     <string name="topic_dashboard">Hassle free service</string>
     <string name="inquiry">Send Inquiry</string>
+    <string name="oops_nothing_found">Oops! Nothing Found</string>
 </resources>

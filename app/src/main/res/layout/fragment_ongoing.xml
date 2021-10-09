@@ -23,5 +23,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/nothingFound_ongoing_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/oops_nothing_found"
+        android:textSize="19dp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/nothingFound_ongoing"
+        app:layout_constraintEnd_toEndOf="@+id/ongoing_history_recyclerView"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/ongoing_history_recyclerView"
+        app:layout_constraintTop_toTopOf="@+id/nothingFound_ongoing"
+        app:layout_constraintVertical_bias="0.937" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
