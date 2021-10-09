@@ -33,6 +33,7 @@ public class forgot_password extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
 
+        //send an email to the user to reset the password
         send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
@@ -26,7 +27,7 @@ import java.util.Calendar;
 
 public class signup extends AppCompatActivity implements View.OnClickListener {
 
-    private EditText fullName,email,phone,password,confirmPassword,address,dob;
+    private EditText fullName, email, phone, password, confirmPassword, address, dob;
     Button signUp;
     TextView signupTOlogin;
 
@@ -57,7 +58,7 @@ public class signup extends AppCompatActivity implements View.OnClickListener {
         signupTOlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(signup.this,login.class) ;
+                Intent i = new Intent(signup.this, login.class);
                 startActivity(i);
                 //Toast.makeText(signup.this, "Login page", Toast.LENGTH_SHORT).show();
             }
@@ -88,11 +89,11 @@ public class signup extends AppCompatActivity implements View.OnClickListener {
                         signup.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                        month = month +1;
-                        String date = day + "/" +month +"/"+year;
+                        month = month + 1;
+                        String date = day + "/" + month + "/" + year;
                         dob.setText(date);
                     }
-                },year,month,day);
+                }, year, month, day);
                 datePickerDialog.show();
             }
         });
@@ -100,9 +101,9 @@ public class signup extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.tv_signup_alreadyreg:
-                startActivity(new Intent(this,login.class));
+                startActivity(new Intent(this, login.class));
                 break;
             case R.id.signupBtn:
                 registerUser();
@@ -131,7 +132,7 @@ public class signup extends AppCompatActivity implements View.OnClickListener {
             address.setError("Required field");
             //dob.setError("Required field");
         }
-        if(!et_fullname.isEmpty() && !et_address.isEmpty() && !et_phone.isEmpty() && !et_password.isEmpty() && !et_confirmpassword.isEmpty() && !et_address.isEmpty() && !dob.getText().toString().isEmpty()){
+        if (!et_fullname.isEmpty() && !et_address.isEmpty() && !et_phone.isEmpty() && !et_password.isEmpty() && !et_confirmpassword.isEmpty() && !et_address.isEmpty() && !dob.getText().toString().isEmpty()) {
             if (!et_fullname.matches("^[a-zA-Z]+(([,. ][a-zA-Z])?[a-zA-Z]*)*$") || et_fullname.length() < 5) {
                 fullName.setError("Invalid name");
                 fullName.setFocusable(true);
@@ -149,33 +150,44 @@ public class signup extends AppCompatActivity implements View.OnClickListener {
 //               confirmPassword.setError("Mismatching");
 //               confirmPassword.setFocusable(true);
 //            }else{
-            {
-            mAuth.createUserWithEmailAndPassword(et_email, et_password)
-                    .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-                            if (task.isSuccessful()) {
-                                user user = new user(et_fullname, et_email, et_phone, et_address, dob.getText().toString());
+            else {
+                //progress Dialog
+                ProgressDialog progressDialogd = new ProgressDialog(this);
+                progressDialogd.setTitle("Please wait");
+                progressDialogd.setMessage("Registering...");
+                progressDialogd.setCanceledOnTouchOutside(false);
+                progressDialogd.show();
 
-                                FirebaseDatabase.getInstance().getReference("User").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                                        .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                    @Override
-                                    public void onComplete(@NonNull Task<Void> task) {
-                                        if (task.isSuccessful()) {
-                                            //redirect to login page
-                                            startActivity(new Intent(signup.this,login.class));
-                                            Toast.makeText(signup.this, "User has been registered successfully", Toast.LENGTH_SHORT).show();
+                mAuth.createUserWithEmailAndPassword(et_email, et_password)
+                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (task.isSuccessful()) {
+                                    user user = new user(et_fullname, et_email, et_phone, et_address, dob.getText().toString());
 
-                                        } else {
-                                            //Toast.makeText(Signup.this, "Failed to registered. Try again!", Toast.LENGTH_SHORT).show();
+                                    FirebaseDatabase.getInstance().getReference("User").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                            .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<Void> task) {
+                                            if (task.isSuccessful()) {
+
+                                                //show progress
+                                                progressDialogd.dismiss();
+                                                //redirect to login page
+                                                startActivity(new Intent(signup.this, login.class));
+                                                Toast.makeText(signup.this, "User has been registered successfully", Toast.LENGTH_SHORT).show();
+
+                                            } else {
+                                                //Toast.makeText(Signup.this, "Failed to registered. Try again!", Toast.LENGTH_SHORT).show();
+                                            }
                                         }
-                                    }
-                                });
-                            } else {
-                                Toast.makeText(signup.this, "Failed to registered. Try again!", Toast.LENGTH_SHORT).show();
+                                    });
+                                } else {
+                                    Toast.makeText(signup.this, "Failed to registered. Try again!", Toast.LENGTH_SHORT).show();
+                                }
                             }
-                        }
-                    });
-        }}
+                        });
+            }
+        }
     }
 }

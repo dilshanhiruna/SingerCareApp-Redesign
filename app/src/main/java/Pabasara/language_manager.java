@@ -17,6 +17,7 @@ public class language_manager {
         sharedPreferences = ct.getSharedPreferences("LANG",Context.MODE_PRIVATE);
     }
 
+    //change the language
     public void updateResource(String code){
         Locale locale = new Locale(code);
         Locale.setDefault(locale);
