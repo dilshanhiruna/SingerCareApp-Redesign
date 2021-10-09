@@ -5,16 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="Pabasara.signup">
+
     <TextView
         android:id="@+id/tvsignup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
         android:layout_marginTop="24dp"
+        android:fontFamily="@font/roboto_bold"
         android:text="@string/Signup"
         android:textColor="@color/black"
         android:textSize="37dp"
-        android:fontFamily="@font/roboto_bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -105,8 +106,8 @@
         android:layout_marginEnd="50dp"
         android:hint="@string/pwd"
         app:boxStrokeColor="@color/black"
-        app:hintTextColor="@color/black"
         app:endIconMode="password_toggle"
+        app:hintTextColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.426"
         app:layout_constraintStart_toStartOf="parent"
@@ -128,8 +129,8 @@
         android:layout_marginEnd="50dp"
         android:hint="@string/confirmpwd"
         app:boxStrokeColor="@color/black"
-        app:hintTextColor="@color/black"
         app:endIconMode="password_toggle"
+        app:hintTextColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.426"
         app:layout_constraintStart_toStartOf="parent"
@@ -184,7 +185,7 @@
             android:layout_width="291dp"
             android:layout_height="50dp"
             android:focusable="false"
-            android:inputType="none"/>
+            android:inputType="none" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -203,15 +204,16 @@
         android:id="@+id/tv_signup_TO_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="116dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="32dp"
         android:text="@string/loginrtn"
         android:textColor="@color/material_pink"
         android:textSize="17dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signupBtn"
-        app:layout_constraintVertical_bias="0.475" />
+        app:layout_constraintHorizontal_bias="0.988"
+        app:layout_constraintStart_toStartOf="@+id/tv_signup_alreadyreg" />
 
     <android.widget.Button
         android:id="@+id/signupBtn"
@@ -227,7 +229,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bx_dob"
-        app:layout_constraintVertical_bias="0.816" />
+        app:layout_constraintVertical_bias="0.673" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

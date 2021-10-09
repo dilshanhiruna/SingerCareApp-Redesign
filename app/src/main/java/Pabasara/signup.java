@@ -52,22 +52,27 @@ public class signup extends AppCompatActivity implements View.OnClickListener {
         signUp = findViewById(R.id.signupBtn);
         signUp.setOnClickListener(this);
 
+        //redirect to login page
         signupTOlogin = findViewById(R.id.tv_signup_TO_login);
         signupTOlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(signup.this,login.class) ;
                 startActivity(i);
-
-                Toast.makeText(signup.this, "Login page", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(signup.this, "Login page", Toast.LENGTH_SHORT).show();
             }
         });
 
-
+        //set dummy data
         fullName.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
-                email.setText("Pabasara");
+                email.setText("xxx@gmail.com");
+                phone.setText("0745678995");
+                password.setText("1234567");
+                confirmPassword.setText("1234567");
+                address.setText("Kandy");
+
             }
         });
         //calender
@@ -140,11 +145,11 @@ public class signup extends AppCompatActivity implements View.OnClickListener {
                 password.setError("password should be at least 6 characters");
                 password.setFocusable(true);
             }
-            //else if(et_confirmpassword != et_password){
-            //   confirmPassword.setError("Mismatching");
-            //   confirmPassword.setFocusable(true);
-            //}
-
+//            else if(et_confirmpassword != et_password){
+//               confirmPassword.setError("Mismatching");
+//               confirmPassword.setFocusable(true);
+//            }else{
+            {
             mAuth.createUserWithEmailAndPassword(et_email, et_password)
                     .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
@@ -171,6 +176,6 @@ public class signup extends AppCompatActivity implements View.OnClickListener {
                             }
                         }
                     });
-        }
+        }}
     }
 }

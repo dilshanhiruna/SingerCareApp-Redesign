@@ -71,7 +71,7 @@
     <android.widget.Button
         android:id="@+id/getstartedBtn"
         android:layout_width="208dp"
-        android:layout_height="70dp"
+        android:layout_height="57dp"
         android:layout_marginBottom="129dp"
         android:text="@string/Getstarted"
         android:textColor="@color/white"

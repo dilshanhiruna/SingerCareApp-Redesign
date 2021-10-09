@@ -42,7 +42,7 @@ public class selecet_language extends AppCompat {
             public void onClick(View v) {
                 lm.updateResource("en");
 //                recreate();
-                Toast.makeText(selecet_language.this, "Changed the language to English", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(selecet_language.this, "Changed the language to English", Toast.LENGTH_SHORT).show();
                 gd.setCornerRadii(new float[]{20,20,0,0,0,0,15,15});
                 english.setBackgroundDrawable(gd);
                 english.setTextColor(Color.parseColor("#FF5864"));
@@ -57,7 +57,7 @@ public class selecet_language extends AppCompat {
             public void onClick(View v) {
                 lm.updateResource("si");
 //                recreate();
-                Toast.makeText(selecet_language.this, "Changed the language to Sinhala", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(selecet_language.this, "Changed the language to Sinhala", Toast.LENGTH_SHORT).show();
 
                 gd.setCornerRadii(new float[]{20,20,0,0,0,0,15,15});
                 sinhala.setBackgroundDrawable(gd);
@@ -74,7 +74,7 @@ public class selecet_language extends AppCompat {
             public void onClick(View v) {
                 lm.updateResource("ta");
 //                recreate();
-                Toast.makeText(selecet_language.this, "Changed the language to Tamil", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(selecet_language.this, "Changed the language to Tamil", Toast.LENGTH_SHORT).show();
 
                 gd.setCornerRadii(new float[]{20,20,0,0,0,0,15,15});
                 tamil.setBackgroundDrawable(gd);
