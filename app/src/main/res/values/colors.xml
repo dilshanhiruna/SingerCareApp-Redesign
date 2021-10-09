@@ -14,5 +14,5 @@
     <color name="light_pink">#FFF0EC</color>
     <color name="soft_pink">#FF5864</color>
     <color name="material_pink">#FF404E</color>
-
+    <color name="select_lngBtn">#FFDCDE</color>
 </resources>
