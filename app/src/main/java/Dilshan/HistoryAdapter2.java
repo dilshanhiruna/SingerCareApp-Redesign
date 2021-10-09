@@ -14,15 +14,23 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.Timestamp;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.uee.singercare.R;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 public class HistoryAdapter2 extends RecyclerView.Adapter<HistoryAdapter2.ViewHolder> {
@@ -84,6 +92,32 @@ public class HistoryAdapter2 extends RecyclerView.Adapter<HistoryAdapter2.ViewHo
         if (rated.get(position)){
             holder.ratingBar.setVisibility(View.VISIBLE);
             holder.ratingBar.setRating(ratings.get(position).floatValue());
+
+            FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+            holder.dp.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
+
+                    Map<String, Object> data = new HashMap<>();
+                    data.put("rated", false);
+
+                    DocumentReference docRef = db.collection("Cards").document(id.get(position));
+                    docRef.update(data).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void unused) {
+
+                            Toast.makeText(context, "UnRated", Toast.LENGTH_SHORT).show();
+
+                        }
+                    });
+
+
+
+                    return true;
+                }
+            });
+
         }else {
             holder.rate_btn.setVisibility(View.VISIBLE);
         }
@@ -100,6 +134,7 @@ public class HistoryAdapter2 extends RecyclerView.Adapter<HistoryAdapter2.ViewHo
 
             }
         });
+
 
 
     }
