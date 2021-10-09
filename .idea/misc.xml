@@ -23,6 +23,7 @@
         <entry key="..\:/SingerCareApp-Redesign/app/src/main/res/layout/fragment_ongoing.xml" value="0.25416666666666665" />
         <entry key="..\:/SingerCareApp-Redesign/app/src/main/res/layout/history_card_view.xml" value="0.25416666666666665" />
         <entry key="..\:/SingerCareApp-Redesign/app/src/main/res/layout/history_card_view_2.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/gayan/OneDrive/Desktop/SingerCareApp-Redesign/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2703125" />
         <entry key="..\:/Users/gayan/OneDrive/Desktop/SingerCareApp-Redesign/app/src/main/res/drawable/cancelbtn.xml" value="0.12777777777777777" />
         <entry key="..\:/Users/gayan/OneDrive/Desktop/SingerCareApp-Redesign/app/src/main/res/drawable/circle.xml" value="0.12777777777777777" />
         <entry key="..\:/Users/gayan/OneDrive/Desktop/SingerCareApp-Redesign/app/src/main/res/drawable/history_btn.xml" value="0.12777777777777777" />
@@ -34,12 +35,14 @@
         <entry key="..\:/Users/gayan/OneDrive/Desktop/SingerCareApp-Redesign/app/src/main/res/drawable/ic_launcher_background.xml" value="0.12777777777777777" />
         <entry key="..\:/Users/gayan/OneDrive/Desktop/SingerCareApp-Redesign/app/src/main/res/drawable/rounded_corner_view.xml" value="0.26666666666666666" />
         <entry key="..\:/Users/gayan/OneDrive/Desktop/SingerCareApp-Redesign/app/src/main/res/drawable/submitratebtn.xml" value="0.12777777777777777" />
-        <entry key="..\:/Users/gayan/OneDrive/Desktop/SingerCareApp-Redesign/app/src/main/res/layout/activity_create_request.xml" value="0.2" />
+        <entry key="..\:/Users/gayan/OneDrive/Desktop/SingerCareApp-Redesign/app/src/main/res/layout/activity_create_request.xml" value="0.264" />
         <entry key="..\:/Users/gayan/OneDrive/Desktop/SingerCareApp-Redesign/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/gayan/OneDrive/Desktop/SingerCareApp-Redesign/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/gayan/OneDrive/Desktop/SingerCareApp-Redesign/app/src/main/res/layout/activity_my_history.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/gayan/OneDrive/Desktop/SingerCareApp-Redesign/app/src/main/res/layout/activity_rate_service.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/gayan/OneDrive/Desktop/SingerCareApp-Redesign/app/src/main/res/layout/activity_selecet_language.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/gayan/OneDrive/Desktop/SingerCareApp-Redesign/app/src/main/res/layout/activity_select_location.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/gayan/OneDrive/Desktop/SingerCareApp-Redesign/app/src/main/res/layout/activity_send_inquiry.xml" value="0.264" />
         <entry key="..\:/Users/gayan/OneDrive/Desktop/SingerCareApp-Redesign/app/src/main/res/layout/activity_signup.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/gayan/OneDrive/Desktop/SingerCareApp-Redesign/app/src/main/res/layout/custom_modal.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/gayan/OneDrive/Desktop/SingerCareApp-Redesign/app/src/main/res/layout/fragment_history.xml" value="0.25416666666666665" />
