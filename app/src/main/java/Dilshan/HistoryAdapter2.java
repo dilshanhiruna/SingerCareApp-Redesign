@@ -68,6 +68,8 @@ public class HistoryAdapter2 extends RecyclerView.Adapter<HistoryAdapter2.ViewHo
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+
         byte[] decodedString = Base64.decode(dp.get(position), Base64.DEFAULT);
         Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
 
@@ -92,8 +94,6 @@ public class HistoryAdapter2 extends RecyclerView.Adapter<HistoryAdapter2.ViewHo
         if (rated.get(position)){
             holder.ratingBar.setVisibility(View.VISIBLE);
             holder.ratingBar.setRating(ratings.get(position).floatValue());
-
-            FirebaseFirestore db = FirebaseFirestore.getInstance();
 
             holder.dp.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
@@ -132,6 +132,28 @@ public class HistoryAdapter2 extends RecyclerView.Adapter<HistoryAdapter2.ViewHo
                 intent.putExtra("ID",id.get(position));
                 v.getContext().startActivity(intent);
 
+            }
+        });
+
+        holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+
+                Map<String, Object> data = new HashMap<>();
+                data.put("active", true);
+
+                DocumentReference docRef = db.collection("Cards").document(id.get(position));
+                docRef.update(data).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+
+                        Toast.makeText(context, "Moved to Ongoing", Toast.LENGTH_SHORT).show();
+
+                    }
+                });
+
+
+                return true;
             }
         });
 

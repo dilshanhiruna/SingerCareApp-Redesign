@@ -12,6 +12,16 @@
         android:id="@+id/ongoing_history_recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
+    <ImageView
+        android:id="@+id/nothingFound_ongoing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/nothingfound"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/ongoing_history_recyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

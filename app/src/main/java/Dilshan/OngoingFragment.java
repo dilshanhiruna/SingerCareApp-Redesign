@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -34,6 +35,8 @@ public class OngoingFragment extends Fragment {
 
     HistoryAdapter historyAdapter;
 
+    ImageView nothingFound_ongoing;
+
     List<String> titles ;
     List<String> categories;
     List<Timestamp> date;
@@ -51,6 +54,7 @@ public class OngoingFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_ongoing, container, false);
         recyclerView = view.findViewById(R.id.ongoing_history_recyclerView);
+        nothingFound_ongoing= view.findViewById(R.id.nothingFound_ongoing);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
 
@@ -71,6 +75,10 @@ public class OngoingFragment extends Fragment {
 //                Toast.makeText(this.getContext(), titles.toString() , Toast.LENGTH_SHORT).show();
                 historyAdapter = new HistoryAdapter(this.getContext(),dp,titles,categories,date);
                 recyclerView.setAdapter(historyAdapter);
+
+                if (historyAdapter.getItemCount()==0){
+                    nothingFound_ongoing.setVisibility(View.VISIBLE);
+                }
 
             } else {
                 Toast.makeText(getContext(), "Error", Toast.LENGTH_SHORT).show();
