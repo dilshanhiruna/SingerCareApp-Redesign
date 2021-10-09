@@ -36,14 +36,13 @@ public class selecet_language extends AppCompat {
                 new int[] {0xFFF83600,0xFFFE8C00});
         gd.setCornerRadii(new float[]{20,20,0,0,0,0,15,15});
 
+        //change the language to english
         english.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 lm.updateResource("en");
 //                recreate();
                 Toast.makeText(selecet_language.this, "Changed the language to English", Toast.LENGTH_SHORT).show();
-//                english.setBackgroundResource(R.drawable.select_lanuage_button);
- //               english.setBackgroundResource(R.color.select_lngBtn);
                 gd.setCornerRadii(new float[]{20,20,0,0,0,0,15,15});
                 english.setBackgroundDrawable(gd);
                 english.setTextColor(Color.parseColor("#FF5864"));
@@ -51,6 +50,8 @@ public class selecet_language extends AppCompat {
                 sinhala.setTextColor(Color.parseColor("#000000"));
             }
         });
+
+        //change the language to Sinhala
         sinhala.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,6 +66,9 @@ public class selecet_language extends AppCompat {
                 tamil.setTextColor(Color.parseColor("#000000"));
             }
         });
+
+
+        //change the language to tamil
         tamil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -79,47 +83,18 @@ public class selecet_language extends AppCompat {
                 sinhala.setTextColor(Color.parseColor("#000000"));
             }
         });
+
+        //login page
         getstarted= findViewById(R.id.getstartedBtn);
         getstarted.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(selecet_language.this,login.class);
                 startActivity(i);
+            }
+        });
+    }
 
-                Toast.makeText(selecet_language.this, "Login Page", Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
-    /*public void setLanguage(Activity activity, String language){
-        Locale locale = new Locale(language);
-        Resources resources = activity.getResources();
-        Configuration configuration = resources.getConfiguration();
-        configuration.setLocale(locale);
-        resources.updateConfiguration(configuration,resources.getDisplayMetrics());
-    }
-    public void onClick(View view){
-        switch (view.getId()){
-            case R.id.englishBtn:{
-                setLanguage(this,"en");
-                break;
-            }
-            case R.id.sinhalaBtn:{
-                setLanguage(this,"si");
-                break;
-            }
-            case R.id.TamilBtn:{
-                setLanguage(this,"ta");
-                break;
-            }
-        }
-        getstarted.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(selecet_language.this,login.class));
-                Toast.makeText(selecet_language.this, "Login Page", Toast.LENGTH_SHORT).show();
-            }
-        });
-    }*/
 
 
 }

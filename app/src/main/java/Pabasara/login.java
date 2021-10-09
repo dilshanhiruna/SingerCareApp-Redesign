@@ -41,23 +41,25 @@ public class login extends AppCompat {
 
         login = findViewById(R.id.btnlogin);
 
+        //signup page
         registerLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(login.this, signup.class);
                 startActivity(i);
 
-                Toast.makeText(login.this, "welcome to register page", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(login.this, "welcome to register page", Toast.LENGTH_SHORT).show();
             }
         });
 
+        //forgot password page
         forgot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(login.this,forgot_password.class);
                 startActivity(i);
 
-                Toast.makeText(login.this, "forgot password page", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(login.this, "forgot password page", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -70,6 +72,8 @@ public class login extends AppCompat {
 
         mAuth = FirebaseAuth.getInstance();
     }
+
+    //validations
     public void userLogin(){
         String email = login_email.getText().toString().trim();
         String password = login_pwd.getText().toString().trim();

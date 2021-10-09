@@ -63,6 +63,13 @@ public class signup extends AppCompatActivity implements View.OnClickListener {
             }
         });
 
+
+        fullName.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                email.setText("Pabasara");
+            }
+        });
         //calender
         Calendar calendar = Calendar.getInstance();
         final int year = calendar.get(Calendar.YEAR);
